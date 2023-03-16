@@ -23,7 +23,16 @@ public class PlayerAnimationControl : MonoBehaviour
     }
     void ChangeAnim()
     {
+        if (agent.velocity.magnitude > 0.5)
+        {
+            animator.SetBool("OnMove", true);
+        }
+        else
+        {
+            animator.SetBool("OnMove", false);
+        }
         float speed = agent.velocity.magnitude;
         animator.SetFloat("Speed", speed);
+        
     }
 }
