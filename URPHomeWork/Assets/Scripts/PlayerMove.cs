@@ -31,17 +31,8 @@ public class PlayerMove : MonoBehaviour
             if(Physics.Raycast(ray, out hitInfo,ground))
             {
                 agent.SetDestination(hitInfo.point);
-                //NavMeshHit navHit;
-                //if(NavMesh.SamplePosition(hitInfo.point,out navHit,Mathf.Infinity,ground))
-                //{
-                    
-                //}
                 
-            }
-
-            
+            }          
         }
-
-    }
-    
+    }    
 }
